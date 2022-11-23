@@ -37,6 +37,8 @@ function buildTable(data) {
   for (var i = 0; i < data.length; i++) {
 
     console.log("HERE");
+    console.log(data.length);
+    
     console.log(data[i].date);
     console.log("XXX");
   
