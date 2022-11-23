@@ -9,8 +9,8 @@ function getDataFromApi(event) {
   //let url = "https://3ffc337b-df38-4f02-b3de-85e05e08e2e9.mock.pstmn.io";
 
   var settings = {
-//    url: `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
-    url: `${url}/transactions`,
+    url: `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
+//    url: `${url}/transactions`,
     method: "GET",
     timeout: 0,
     headers: {
