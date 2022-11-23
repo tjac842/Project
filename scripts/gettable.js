@@ -22,7 +22,7 @@ function getDataFromApi(event) {
   console.log("calling my new API");
 
   $.ajax(settings).done(function (response) {
-    myArray = response.json;
+    myArray = response.json();
     console.log("BEFORE");
     console.log(myArray);
     buildTable(myArray);
