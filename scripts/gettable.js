@@ -32,6 +32,10 @@ function getDataFromApi(event) {
 function buildTable(data) {
   var table = document.getElementById("myTable");
 
+  console.log("HERE");
+  console.log(data[i].date);
+  console.log("XXX");
+
   for (var i = 0; i < data.length; i++) {
     var row = `<tr>
                       <td>${data[i].date}</td>
