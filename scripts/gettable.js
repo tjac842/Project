@@ -3,14 +3,14 @@ const startdate = document.getElementById("startdate");
 const enddate = document.getElementById("enddate");
 
 function getDataFromApi(event) {
-  let url = "https://fe04156e-b0a5-468a-a569-dab0a548bb56.mock.pstmn.io";
+  //let url = "https://fe04156e-b0a5-468a-a569-dab0a548bb56.mock.pstmn.io";
 
 
-  //let url = "https://3ffc337b-df38-4f02-b3de-85e05e08e2e9.mock.pstmn.io";
+  let url = "https://3ffc337b-df38-4f02-b3de-85e05e08e2e9.mock.pstmn.io";
 
   var settings = {
-    url: `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
-//    url: `${url}/transactions`,
+  //  url: `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
+    url: `${url}/transactions`,
     method: "GET",
     timeout: 0,
     headers: {
