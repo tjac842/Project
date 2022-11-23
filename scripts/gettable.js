@@ -38,6 +38,7 @@ function buildTable(data) {
 
     console.log("HERE");
     console.log(data.length);
+    console.log(data);
     
     console.log(data[i].date);
     console.log("XXX");
