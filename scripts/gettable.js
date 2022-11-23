@@ -23,6 +23,8 @@ function getDataFromApi(event) {
 
   $.ajax(settings).done(function (response) {
     myArray = response;
+    console.log("BEFORE");
+    console.log(myArray);
     buildTable(myArray);
     console.log(myArray);
   });
