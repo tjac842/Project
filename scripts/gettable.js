@@ -34,6 +34,10 @@ function getDataFromApi(event) {
 function buildTable(data) {
   var table = document.getElementById("myTable");
 
+  console.log("INSIDE");
+  console.log(data);
+  buildTable(data);
+  console.log(data);
 
   for (var i = 0; i < data.length; i++) {
 
