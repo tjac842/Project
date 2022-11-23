@@ -19,7 +19,7 @@ function getDataFromApi(event) {
   };
 
   var myArray = [];
-  console.log("calling API");
+  console.log("calling my new API");
 
   $.ajax(settings).done(function (response) {
     myArray = response;
