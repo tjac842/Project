@@ -6,43 +6,91 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/index.css" rel="stylesheet" />
-    <title>nus money</title>
+    <title>Welcome</title>
   </head>
   <body class="container full-height-grow">
+    
     <header class="main-header">
       <a href="/" class="brand-logo">
         <img src="images/nus-money-logo.svg" />
         <div class="brand-logo-name">nus money</div>
       </a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="feature.html">How it works</a></li>
-          <li><a href="transactions.html">Transactions</a></li>
-        </ul>
-      </nav>
     </header>
-    <section class="dashboard-section">
-      <h3>Dashboard</h3>
-      <form id="chartform">
-        <div class="form-control">
-          <label for="startdate">Start Date</label>
-          <input type="date" id="startdate" placeholder="Enter start date..." />
+    
+    <section id="dashboard">
+      
+      <div id="dashboard_title">
+        <h1>My Dashboard</h1>
+      </div>
+
+      <div class="dashboard_nav_container">
+
+        <div class="box">
+          <button class="btn" onclick="location.href = 'transactions.html'">View Transactions</button>
+          <button class="btn" onclick="location.href = 'budgetPlan_Success.html'">View Expenditures</button>
+          <button class="btn" onclick="location.href = 'budgetPlan.html'">Create a new Plan</button>
         </div>
-        <div class="form-control">
-          <label for="enddate">End Date</label>
-          <input type="date" id="enddate" placeholder="Enter end date..." />
+      </div>  
+
+      <div class="dashboard_expenditures_container">
+        
+        <div id="dashboard_expenditures_title">
+          <h3>Top 5 expenditures of the month</h3>
         </div>
-        <button class="btn">Submit</button>
-      </form>
-      <!-- "myChart" is the object that our Javascript code will create the chart -->
-      <div id="myChart"></div>
-      <div id="myLegend"></div>
+
+      <div class="dashboard_container">  
+
+        <!--box for value input-->  
+        <div class="dashboard_cat_box">
+          <div class="cat_title">
+            <p1>Food</p1>
+            <div class="value">
+              <p1>Value / Value</p1>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard_cat_box">
+          <div class="cat_title">
+            <p1>Transport</p1>
+            <div class="value">
+              <p1>Value / Value</p1>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard_cat_box">
+          <div class="cat_title">
+            <p1>Utilities</p1>
+            <div class="value">
+              <p1>Value / Value</p1>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard_cat_box">
+          <div class="cat_title">
+            <p1>Shopping</p1>
+            <div class="value">
+              <p1>Value / Value</p1>
+            </div>
+          </div>
+        </div>
+        
+        <div class="dashboard_cat_box">
+          <div class="cat_title">
+            <p1>Miscell.</p1>
+            <div class="value">
+              <p1>Value / Value</p1>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+
     </section>
-    <!-- Load the jquery library from Google's Content Delivery Network -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- Load the d3.js library -->
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <!-- Our Javascript code to create the pie chart -->
-    <script src="/scripts/getchart.js"></script>
+
   </body>
 </html>
