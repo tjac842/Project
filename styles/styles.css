@@ -208,3 +208,47 @@ body {
   padding-top: 50px;
   text-align: center;
 }
+
+#dashboard_title{
+  text-align: center;
+  width: 1000px;
+
+}
+
+.dashboard_container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.dashboard_container .dashboard_cat_box {
+  display: flex;
+}
+
+.dashboard_cat_box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: .8rem;
+  padding: .75rem;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  border-color: black;
+}
+
+.cat_title {
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: bold;
+  flex-direction: column;
+}
