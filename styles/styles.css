@@ -159,11 +159,13 @@ body {
 
 #budgetPlan_title{
   text-align: center;
+  width: 1000px;
 
 }
 
 #budgetPlan_overall{
   height: 250px;
+  width: 1000px;
   padding-top: 30px;
 }
 
@@ -194,6 +196,7 @@ body {
 .budgetPlan_buttons{
   padding-top: 80px;
   text-align: center;
+  width: 1000px;
 }
 
 ::placeholder {
