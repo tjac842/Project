@@ -9,6 +9,9 @@
   --btn-bg-color: #a72608ff; /* rufous */
   --menu-hover-color: #f7f0f5ff; /* magnolia */
   --btn-text-color: #f7f0f5ff; /* magnolia */
+
+  --btn2-bg-color:  #f7f0f5ff; /* magnolia */
+  --btn2-text-color: #a72608ff; /* rufous */
 }
 
 *,
@@ -130,3 +133,72 @@ body {
 .btn:focus {
   background-color: var(--btn-focus-color);
 }
+
+
+
+.btn2 {
+  color: var(--btn2-text-color);
+  background-color: var(--btn2-bg-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.btn2:focus {
+  background-color: var(--btn-focus-color);
+}
+
+
+#budgetPlan_title{
+  text-align: center;
+
+}
+
+#budgetPlan_overall{
+  height: 250px;
+  padding-top: 30px;
+}
+
+.budgetPlanText{
+  height: 50px;
+  width: 160px;
+  border-radius: 0.5em;
+}
+
+.budgetPlan_inputs{
+  padding-bottom: 25px;
+  font-size: 30px;
+}
+
+#budgetPlan_Col1{
+  float: left;
+  text-align: right;
+  padding-left: 140px;
+}
+
+#budgetPlan_Col2{
+  float:right;
+  text-align: right;
+  padding-right: 140px;
+}
+
+
+.budgetPlan_buttons{
+  padding-top: 80px;
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center; 
+}
+
+
+
