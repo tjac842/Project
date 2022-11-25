@@ -9,7 +9,7 @@ function getDataFromApi(event) {
   // let url = "https://3ffc337b-df38-4f02-b3de-85e05e08e2e9.mock.pstmn.io";
 
 
-  let url = "https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/";
+  let url = "https://nus-course-backend-5i7iu7m5xa-uc.a.run.app";
 
   var settings = {
     // GBH
