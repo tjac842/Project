@@ -16,8 +16,9 @@ function getDataFromApi(event) {
     // Used the new URL
     //  url: `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
 
-    url: `${url}/transaction?startDate="2022-09-10"&endDate="2022-10-10"&category="food"&description="coffee"`,
+    //url: `${url}/transaction?startDate=2022-09-10&endDate=2022-10-10&category=food&description=coffee`,
     //url: `${url}/transactions`,
+    url: `${url}/user`,
     method: "GET",
     timeout: 0,
     headers: {
