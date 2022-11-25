@@ -31,7 +31,9 @@ function getDataFromApi(event) {
 
   $.ajax(settings).done(function (response) {
     myArray = response;
+    console.log("INSIDE");
     console.log(myArray);
+    console.log("INSIDE1");
     buildTable(myArray);
   });
   event.preventDefault();
