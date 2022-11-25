@@ -6,13 +6,18 @@ function getDataFromApi(event) {
   // GBH
   // Used the new URL
   // let url = "https://fe04156e-b0a5-468a-a569-dab0a548bb56.mock.pstmn.io";
-  let url = "https://3ffc337b-df38-4f02-b3de-85e05e08e2e9.mock.pstmn.io";
+  // let url = "https://3ffc337b-df38-4f02-b3de-85e05e08e2e9.mock.pstmn.io";
+
+
+  let url = "https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/";
 
   var settings = {
     // GBH
     // Used the new URL
     //  url: `${url}/transactions?startdate=${startdate}&enddate=${enddate}`,
-    url: `${url}/transactions`,
+
+    url: `${url}//transaction?startDate=2022-09-10&endDate=2022-10-10&category=food&description=coffee`,
+    //url: `${url}/transactions`,
     method: "GET",
     timeout: 0,
     headers: {
