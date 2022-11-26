@@ -131,7 +131,8 @@ body {
   background-color: var(--btn-focus-color);
 }
 
-/* GBH Added the following CSS for striped table instead of using rootstrap. */
+/* GBH */
+/* Added the following CSS for striped table. */
 #transactions {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
