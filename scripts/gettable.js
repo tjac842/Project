@@ -26,7 +26,7 @@ function getDataFromApi(event) {
 
     // This is Lex's API. I just hardcode the param for now.
     // Error in console -- something about CORS.
-    url: `${url}/transaction?startDate=2022-09-10&endDate=2022-10-10&category=food&description=coffee`,
+    url: `${url}/transaction?startDate="2022-09-10"&endDate="2022-10-10"&category="food"&description="coffee"`,
     
     // I also tried with a simpler API. Also not working. Same CORS error.
     //url: `${url}/user`,
