@@ -5,5 +5,6 @@ b.addEventListener("click", async () => {
     method: "GET",
     mode: "cors",
     headers: { "Content-Type": "application/json" },
+    credentials: "include",
   }).then((response) => response.json());
 });
