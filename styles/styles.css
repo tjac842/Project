@@ -338,3 +338,16 @@ h4 {
   background-color: #000000;
   color: white;
 }
+
+
+.budgetPlanName{
+  height: 50px;
+  width: 550px;
+  border-radius: 0.5em;
+}
+
+#budgetPlan_Name{
+  width: 1000px;
+  font-size: 30px;
+  text-align: center;
+}
