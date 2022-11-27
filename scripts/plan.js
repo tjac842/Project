@@ -1,7 +1,7 @@
-var form=document.getElementById("plan_form")
+var createPlanBtn=document.getElementById("plan_btn")
 
-form.addEventListener('submit', function(e){
- e.preventDefault()
+
+createPlanBtn.addEventListener("click", async () => {
  var planName=document.getElementById('planName').value
  var food=document.getElementById('foodLabel').value
  var transport=document.getElementById('transportLabel').value
@@ -37,11 +37,9 @@ form.addEventListener('submit', function(e){
   }),
   headers: {
     'Content-type': 'application/json; charset=UTF-8',
-  }
-  })
-  .then(function(response){ 
-  return response.json()})
-  .then(function(data)
-  {console.log(data)
-}).catch(error => console.error('Error:', error)); 
+  },
+}).then((response) => response.json());
+
+
+
 });
