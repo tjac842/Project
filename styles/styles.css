@@ -9,6 +9,9 @@
   --btn-bg-color: #a72608ff; /* rufous */
   --menu-hover-color: #f7f0f5ff; /* magnolia */
   --btn-text-color: #f7f0f5ff; /* magnolia */
+
+  --btn2-bg-color:  #f7f0f5ff; /* magnolia */
+  --btn2-text-color: #a72608ff; /* rufous */
 }
 
 *,
@@ -16,6 +19,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 
 body {
   padding: 0;
@@ -130,6 +134,176 @@ body {
 .btn:focus {
   background-color: var(--btn-focus-color);
 }
+
+
+
+.btn2 {
+  color: var(--btn2-text-color);
+  background-color: var(--btn2-bg-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.btn2:focus {
+  background-color: var(--btn-focus-color);
+}
+
+
+#budgetPlan_title{
+  text-align: center;
+  width: 1000px;
+
+}
+
+#budgetPlan_overall{
+  height: 250px;
+  width: 1000px;
+  padding-top: 30px;
+}
+
+.budgetPlanText{
+  height: 50px;
+  width: 160px;
+  border-radius: 0.5em;
+}
+
+.budgetPlan_inputs{
+  padding-bottom: 25px;
+  font-size: 30px;
+}
+
+#budgetPlan_Col1{
+  float: left;
+  text-align: right;
+  padding-left: 140px;
+}
+
+#budgetPlan_Col2{
+  float:right;
+  text-align: right;
+  padding-right: 140px;
+}
+
+
+.budgetPlan_buttons{
+  padding-top: 80px;
+  text-align: center;
+  width: 1000px;
+}
+
+::placeholder {
+  text-align: center; 
+}
+
+
+#budgetPlan_message{
+  padding-top: 50px;
+  text-align: center;
+}
+
+#dashboard_title{
+  text-align: center;
+  width: 1000px;
+  margin-bottom: 2em;
+
+}
+
+#dashboard_expenditures_title {
+  margin-top: 2em;  
+}
+
+.dashboard_container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.dashboard_container .dashboard_cat_box {
+  display: flex;
+}
+
+.dashboard_cat_box {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: .8rem;
+  padding: .75rem;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  border-color: black;
+}
+
+.cat_title {
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.value {
+  font-size: 20px;
+  font-weight: bold;
+  flex-direction: column;
+}
+
+.balance_container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.balance_container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.balance_container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.add {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
 
 /* GBH */
 /* Added the following CSS for striped table. */
