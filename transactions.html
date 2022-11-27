@@ -24,41 +24,48 @@
     <section class="transactions-section">
       <h3>Transaction Details</h3>
       <form id="form">
-        <table>
         <div class="form-control">
-          <tr>
-            <td>
-            <label for="startdate">Start Date</label>
-          </td>
-                  </tr>
-          <tr>
-            <td>
-              <input type="date" id="startdate" placeholder="Enter start date..." />
-            </td>
-          </tr>
+          <table>
+            <tr>
+              <td>
+                <label for="startdate">Start Date</label>
+              </td>
+              <td>
+                <input type="date" id="startdate" placeholder="Enter start date..." />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="enddate">End Date</label>
+              </td>
+              <td>
+                <input type="date" id="enddate" placeholder="Enter end date..." />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="category">Category</label>
+              </td>
+              <td>
+                <input type="text" id="category" placeholder="Enter category..." />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="description">Description</label>
+              </td>
+              <td>
+                <input type="text" id="description" placeholder="Enter description..." />
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>
+                <button class="btn">Submit</button>
+              </td>
+            </tr>
+          </table>
         </div>
-      <div class="form-control">
-        <tr>
-          <td>
-            <label for="enddate">End Date</label>
-        </td>
-      </tr>
-        <tr>
-          <td>
-            <input type="date" id="enddate" placeholder="Enter end date..." />
-        </td>
-      </tr>
-    </table>
-  </div>
-        <div class="form-control">
-          <label for="enddate">Category</label>
-          <input type="text" id="category" placeholder="Enter category..." />
-        </div>
-        <div class="form-control">
-          <label for="enddate">Description</label>
-          <input type="text" id="description" placeholder="Enter description..." />
-        </div>
-              <button class="btn">Submit</button>
       </form>
 
       <br>
