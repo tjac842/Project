@@ -115,7 +115,7 @@ body {
   margin-bottom: 2rem;
 }
 
-.plan_btn {
+#plan_btn {
   color: var(--btn-text-color);
   background-color: var(--btn-bg-color);
   padding: 0.75rem 1.5rem;
@@ -127,17 +127,17 @@ body {
   cursor: pointer;
 }
 
-.plan_btn:hover {
+#plan_btn:hover {
   background-color: var(--btn-hover-color);
 }
 
-.plan_btn:focus {
+#plan_btn:focus {
   background-color: var(--btn-focus-color);
 }
 
 
 
-.plan_btn2 {
+#plan_btn2 {
   color: var(--btn2-text-color);
   background-color: var(--btn2-bg-color);
   padding: 0.75rem 1.5rem;
@@ -149,11 +149,11 @@ body {
   cursor: pointer;
 }
 
-.plan_btn2:hover {
+#plan_btn2:hover {
   background-color: var(--btn-hover-color);
 }
 
-.plan_btn2:focus {
+#plan_btn2:focus {
   background-color: var(--btn-focus-color);
 }
 
