@@ -213,7 +213,12 @@ body {
 #dashboard_title{
   text-align: center;
   width: 1000px;
+  margin-bottom: 2em;
 
+}
+
+#dashboard_expenditures_title {
+  margin-top: 2em;  
 }
 
 .dashboard_container {
@@ -252,4 +257,49 @@ body {
   font-size: 20px;
   font-weight: bold;
   flex-direction: column;
+}
+
+.balance_container {
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  border-radius: 0.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.balance_container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.balance_container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.money {
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.add {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
 }
