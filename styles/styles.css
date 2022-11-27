@@ -146,6 +146,8 @@ body {
 
 #transactions tr:nth-child(even){background-color: #71a908;}
 
+#transactions tr:nth-child(odd){background-color: #a94308;}
+
 /*#transactions tr:hover {background-color: #ddd;}
 */
 
