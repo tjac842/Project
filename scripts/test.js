@@ -16,7 +16,7 @@ getUserButton.addEventListener("click", async () => {
 });
 
 addPlanButton.addEventListener("click", async () => {
-  fetch("http://localhost:3000/Plan", {
+  fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/Plan", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     mode: "cors",
