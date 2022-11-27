@@ -144,9 +144,9 @@ body {
   padding: 8px;
 }
 
-#transactions tr:nth-child(even){background-color: #71a908;}
+#transactions tr:nth-child(even){background-color: #abacaa;}
 
-#transactions tr:nth-child(odd){background-color: #a94308;}
+#transactions tr:nth-child(odd){background-color: #605f5e;}
 
 /*#transactions tr:hover {background-color: #ddd;}
 */
@@ -155,6 +155,6 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #000000;
   color: white;
 }
