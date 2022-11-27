@@ -18,6 +18,7 @@ function getDataFromApi(event) {
   // It is not working at the moment. (CORS issue at first, was resolved, now returned. Otehr issue is the Auth redirect.)
   //let url = "https://nus-course-backend-5i7iu7m5xa-uc.a.run.app";
 
+  
   var settings = {
     // GBH
     // This is the original API. It works.
