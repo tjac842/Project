@@ -1,38 +1,47 @@
-const add = {
-  name: document.getElementById("food"),
-  settings: "[{ \"Category\": \"Food\", \"Value\":200 }, 
-  { \"Category\": \"Transport\", \"Value\":100 }, 
-  { \"Category\": \"Utilities\", \"Value\":150 }, 
-  { \"Category\": \"Shopping\", \"Value\":200 }, 
-  { \"Category\": \"Misc\", \"Value\":100}]"
+var form=document.getElementById("plan_form")
 
-  };
+form.addEventListener('submit', function(e){
+ e.preventDefault()
+ var planName=document.getElementById('planName').value
+ var food=document.getElementById('foodLabel').value
+ var transport=document.getElementById('transportLabel').value
+ var utilities=document.getElementById('utilitiesLabel').value
+ var shopping=document.getElementById('shoppingLabel').value
+ var misc=document.getElementById('miscLabel').value
 
 
-function createPlanButton() {
-
-    const food = document.getElementById("food");
-    const transport = document.getElementById("transport");
-    const utilities = document.getElementById("utilities");
-    const shopping = document.getElementById("shopping");
-    const misc = document.getElementById("misc");
-
-    //https://www.freecodecamp.org/news/how-to-make-api-calls-with-fetch/
-
-    window.location.href = 'createPlanSuccess.html';
+ fetch('https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/plan', {
+  method: 'POST',
+  body: JSON.stringify({
+    name:planName,
+    settings:[{
+      "Category": "Food",
+      "Value": food,
+    }, {
+      "Category": "Transport",
+      "Value": transport,
+    },
+    {
+      "Category": "Utilities",
+      "Value": utilities,
+    },
+    {
+      "Category": "Shopping",
+      "Value": shopping,
+    },
+    {
+      "Category": "Misc",
+      "Value": misc,
+    },
+  ]
+  }),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
   }
-
-
-const b = document.getElementById("getusers");
-const c = document.getElementById("getuser");
-
-b.addEventListener("click", async () => {
-  fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/users", {
-    method: "GET",
-    mode: "cors",
-    headers: { "Content-Type": "application/json" },
-  }).then((response) => response.json());
+  })
+  .then(function(response){ 
+  return response.json()})
+  .then(function(data)
+  {console.log(data)
+}).catch(error => console.error('Error:', error)); 
 });
-
-
-

@@ -8,8 +8,6 @@
     <link href="styles/index.css" rel="stylesheet" />
     <title>nus money</title>
 
-    <script src="planFunctions.js"></script>
-
   </head>
 
   <body class="container">
@@ -33,14 +31,14 @@
       <div id = "budgetPlan_Name">
         <form>
             <label for= "planName"> Plan Name: </label>
-            <input type = "text" id="planName" placeholder="Input an name for your plan" class="budgetPlanName"" name = "plan_name"/>  <br>
+            <input type = "text" id="planName" placeholder="Input an name for your plan" class="budgetPlanName" name = "plan_name"/>  <br>
         </form>
       </div>
 
 
 
-      <div id = budgetPlan_overall>
-        <form>
+      <div id = "budgetPlan_overall">
+        <form id = "plan_form">
 
             <div id = "budgetPlan_Col1">
                 <div class = "budgetPlan_inputs">
@@ -75,9 +73,11 @@
       </div>
 
       <div class="budgetPlan_buttons">
-        <button class="btn" onclick="createPlanButton()">Create Plan!</button>
-        <button class="btn2">Cancel</button>
+        <button class="plan_btn">Create Plan!</button>
+        <button class="plan_btn2">Cancel</button>
       </div>
+
+      <script src="scripts/plan.js"></script>
 
   </body>
 
