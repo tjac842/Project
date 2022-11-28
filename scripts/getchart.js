@@ -129,8 +129,7 @@ const myLegend = document.getElementById("myLegend");
 
 
 function buildUrl() {
-  // let url = `https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/transaction?`;
-  let url = `http://localhost:5500/transaction?`;
+  let url = `https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/transaction?`;
   let isFirstParams = true;
 
   if (startdate.value !== "") {
