@@ -15,31 +15,12 @@ createPlanBtn.addEventListener("click", async () => {
     credentials: "include",
     body: JSON.stringify({
       name: planName,
-      settings:[{
-        "Category": "Food",
-        "Value": food,
-      }, {
-        "Category": "Transport",
-        "Value": transport,
-      },
-      {
-        "Category": "Utilities",
-        "Value": utilities,
-      },
-      {
-        "Category": "Shopping",
-        "Value": shopping,
-      },
-      {
-        "Category": "Misc",
-        "Value": misc,
-      }]
+      settings:`[{"Category": "Food","Value": ${food}}, {"Category": "Transport","Value": ${transport}},{"Category": "Utilities","Value": ${utilities}},{"Category": "Shopping","Value": ${shopping}},{"Category": "Misc","Value": ${misc}}]`
     }),
-  })
-    .then((response) => response.json())
+  }).then((response) => response.json())
     .then((data) => {
       console.log(data);
-
+      window.location.href='budgetPlanSuccess.html'
       return data || {};
     })
     .catch((error) => console.log(error));
