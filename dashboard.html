@@ -31,14 +31,20 @@
         <h1>My Dashboard</h1>
       </div>
 
-      <div class="dashboard_nav_container">
+      <div class="account_balance">
+        <div class="balance_title">
+          <p>Your Balance</p>
+          <p class="value" id="balance"></p>
+        <!--<p>Value / Value</p>-->
+          </div>
+        </div>
+      </div>
 
         <div class="box">
           <button class="btn" onclick="location.href = 'transactions.html'">View Transactions</button>
-          <button class="btn" onclick="location.href = 'balance.html'">View Balance</button>
           <button class="btn" onclick="location.href = 'budgetPlan.html'">Create a new Plan</button>
+          <button id="connect_btn">Connect to Account</button>
         </div>
-      </div>  
 
       <div class="dashboard_expenditures_container">
         
@@ -52,8 +58,8 @@
         <div class="dashboard_cat_box">
           <div class="cat_title">
             <p>Food</p>
-            <div class="value">
-              <p>Value / Value</p> <!--JS Script-->
+            <div class="value" id="food">
+          <!--<p>Value / Value</p>-->
             </div>
           </div>
         </div>
@@ -61,8 +67,8 @@
         <div class="dashboard_cat_box">
           <div class="cat_title">
             <p>Transport</p>
-            <div class="value">
-              <p>Value / Value</p> <!--JS Script-->
+            <div class="value" id="transport">
+          <!--<p>Value / Value</p>-->
             </div>
           </div>
         </div>
@@ -70,8 +76,8 @@
         <div class="dashboard_cat_box">
           <div class="cat_title">
             <p>Utilities</p>
-            <div class="value">
-              <p>Value / Value</p> <!--JS Script-->
+            <div class="value" id="utilities">
+          <!--<p>Value / Value</p>-->
             </div>
           </div>
         </div>
@@ -79,8 +85,8 @@
         <div class="dashboard_cat_box">
           <div class="cat_title">
             <p>Shopping</p>
-            <div class="value">
-              <p>Value / Value</p> <!--JS Script-->
+            <div class="value" id="shopping">
+          <!--<p>Value / Value</p>-->
             </div>
           </div>
         </div>
@@ -88,8 +94,8 @@
         <div class="dashboard_cat_box">
           <div class="cat_title">
             <p>Misc</p>
-            <div class="value">
-              <p>Value / Value</p> <!--JS Script-->
+            <div class="value" id="misc">
+          <!--<p>Value / Value</p>-->
             </div>
           </div>
         </div>
@@ -99,6 +105,8 @@
       </div>
 
     </section>
+
+    <script src="scripts/dashboard.js"></script>
 
   </body>
 </html>
