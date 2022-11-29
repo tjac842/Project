@@ -1,43 +1,46 @@
-// For Login
-// const b = document.getElementById("getusers");
-// const c = document.getElementById("getuser");
+// const getUserButton = document.getElementById("getuser");
+const loginUser = document.getElementById("login");
+const logoutUser = document.getElementById("logout");
 
-b.addEventListener("click", async () => {
-    fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/users", {
-      method: "GET",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-    }).then((response) => response.json());
-  }); //test
-  
-  c.addEventListener("click", async () => {
-    fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/user", {
-      method: "GET",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-    }).then((response) => response.json());
-  });
+//Get User
+// getUserButton.addEventListener("click", async () => {
+//   fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/user", {
+//     method: "GET",
+//     headers: { "Content-Type": "application/json" },
+//     mode: "cors",
+//     credentials: "include",
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       return data || {};
+//     })
+//     .catch((error) => console.log(error));
+// });
 
-  addEventListener("click", async () => {
-    fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/login", {
-      method: "GET",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
-      credentials: "include",
-    }).then((response) => response.json());
-  });
+//User login
+loginUser.addEventListener("click", async () => {
+  fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/login", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    mode: "cors",
+    credentials: "include",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      return data || {};
+    })
+    .catch((error) => console.log(error));
+});
   
-  // For Logout
-  c.addEventListener("click", async () => {
-      fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/logout", {
-        method: "GET",
-        mode: "cors",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-      }).then((response) => response.json());
-  });
+logoutUser.addEventListener("click", async () => {
+  fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/logout", {
+    method: "GET",
+    headers: { "Content-Type": "application/json" },
+    mode: "cors",
+    credentials: "include",
+  })
+    .then((response) => response.json())
+});
   
   // b.addEventListener("click", async () => {
   //     fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/users", {
