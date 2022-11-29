@@ -20,7 +20,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   padding: 0;
   margin: 0;
@@ -113,6 +112,38 @@ body {
   font-weight: 500;
   font-size: 1.2em;
   margin-bottom: 2rem;
+}
+
+.btn {
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
+  padding: .75rem 1.5rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+.btn:focus {
+  background-color: var(--btn-focus-color);
 }
 
 #plan_btn {
@@ -212,7 +243,6 @@ body {
 
 #dashboard_title{
   text-align: center;
-  width: 1000px;
   margin-bottom: 2em;
 
 }
@@ -350,4 +380,25 @@ h4 {
   width: 1000px;
   font-size: 30px;
   text-align: center;
+}
+
+
+#connect_btn {
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#connect_btn:hover {
+  background-color: var(--btn-hover-color);
+}
+
+#connect_btn:focus {
+  background-color: var(--btn-focus-color);
 }
