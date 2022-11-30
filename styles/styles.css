@@ -453,3 +453,7 @@ td {
   display: inline-block;
   padding-left: 100px;
 }
+
+ol li {
+  font-size: 0.8em;
+}
