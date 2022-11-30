@@ -56,6 +56,9 @@ function getCategoriesFromApi(event) {
 }
 
 function buildChart(data) {
+  // remove existing svgs for re-rendering
+  d3.selectAll("svg").remove();
+
   // set the dimensions and margins of the graph
   var width = 450;
   height = 450;
@@ -119,8 +122,6 @@ function buildLegend(data) {
     table.innerHTML = "";
 
     for (var i = 0; i < data.length; i++) {
-      console.log(data);
-
       var row = `<tr>
                         <td>${data[i].Category}</td>
                         <td style="text-align:right;">${data[i].Amount}</td>
@@ -135,6 +136,11 @@ function buildLegend(data) {
         <td style="text-align:right;">${total.toFixed(2)}</td>
       </tr>
     </tfoot>`;
+
+    let oldFooter = document.getElementsByTagName("tfoot");
+    if (oldFooter.length > 0) {
+      legend.removeChild(oldFooter[0]);
+    }
 
     legend.innerHTML += footer;
     legend.style.display = "inline-block";
