@@ -35,7 +35,7 @@ fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/account/balance", {
   });
 
 //Overview
-fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/overview", {
+fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/account/overview", {
   method: "GET",
   mode: "cors",
   headers: { "Content-Type": "application/json" },
