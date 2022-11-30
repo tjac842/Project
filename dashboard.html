@@ -7,17 +7,13 @@
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/index.css" rel="stylesheet" />
     <title>Welcome</title>
+    <style>
+      p{
+        text-align:center;
+      }
+    </style>
   </head>
-  <body class="container full-height-grow">
-
-  
-  <style>
-    p{
-      text-align:center;
-    }
-  </style>
-  
-
+  <body class="container full-height-grow" onload='checkLogin()'>
     <header class="main-header">
       <a href="/" class="brand-logo">
         <img src="images/nus-money-logo.svg" />
@@ -35,7 +31,6 @@
         <div class="balance_title">
           <p>My Account Balance</p>
           <p class="value" id="balance"></p>
-        <!--<p>Value / Value</p>-->
           </div>
         </div>
       </div>
@@ -43,7 +38,7 @@
         <div class="box">
           <button class="btn" onclick="location.href = 'transactions.html'">View My Transaction Details</button>
           <button class="btn" onclick="location.href = 'budgetPlan.html'">Create a new Plan</button>
-          <button id="connect_btn">Connect to My Account</button>
+          <button id="connect_btn" style="float:right">Connect to My Account</button>
         </div>
 
       <div class="dashboard_expenditures_container">
@@ -52,61 +47,29 @@
           <h3>Top 5 expenditures of the month</h3>
         </div>
 
-      <div class="dashboard_container">  
-
-        <!--box for value input-->  
-        <div class="dashboard_cat_box">
-          <div class="cat_title">
-            <p>Food</p>
-            <div class="value" id="food">
-          <!--<p>Value / Value</p>-->
-            </div>
-          </div>
-        </div>
-
-        <div class="dashboard_cat_box">
-          <div class="cat_title">
-            <p>Transport</p>
-            <div class="value" id="transport">
-          <!--<p>Value / Value</p>-->
-            </div>
-          </div>
-        </div>
-
-        <div class="dashboard_cat_box">
-          <div class="cat_title">
-            <p>Utilities</p>
-            <div class="value" id="utilities">
-          <!--<p>Value / Value</p>-->
-            </div>
-          </div>
-        </div>
-
-        <div class="dashboard_cat_box">
-          <div class="cat_title">
-            <p>Shopping</p>
-            <div class="value" id="shopping">
-          <!--<p>Value / Value</p>-->
-            </div>
-          </div>
-        </div>
-        
-        <div class="dashboard_cat_box">
-          <div class="cat_title">
-            <p>Misc</p>
-            <div class="value" id="misc">
-          <!--<p>Value / Value</p>-->
-            </div>
-          </div>
-        </div>
-
+      <div id ="dashboard_container"  class="dashboard_container">
       </div>
-
       </div>
-
     </section>
 
     <script src="scripts/dashboard.js"></script>
-
+    <script>
+      function checkLogin() {
+        fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/profile", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+          mode: "cors",
+          credentials: "include",
+        })
+          .then((response) => {
+            if (response.status !== 200) {
+              location.assign("/");
+            }
+          })
+          .catch((error) => {
+            location.assign("/");
+          });
+      }
+    </script>
   </body>
 </html>

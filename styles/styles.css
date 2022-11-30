@@ -10,7 +10,7 @@
   --menu-hover-color: #f7f0f5ff; /* magnolia */
   --btn-text-color: #f7f0f5ff; /* magnolia */
 
-  --btn2-bg-color:  #f7f0f5ff; /* magnolia */
+  --btn2-bg-color: #f7f0f5ff; /* magnolia */
   --btn2-text-color: #a72608ff; /* rufous */
 }
 
@@ -117,10 +117,10 @@ body {
 .btn {
   color: var(--btn-text-color);
   background-color: var(--btn-bg-color);
-  padding: .75rem 1.5rem;
-  border-radius: .5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   text-decoration: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -129,10 +129,10 @@ body {
 .btn {
   color: var(--btn-text-color);
   background-color: var(--btn-bg-color);
-  padding: .75rem 1.5rem;
-  border-radius: .5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
   text-decoration: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -166,8 +166,6 @@ body {
   background-color: var(--btn-focus-color);
 }
 
-
-
 #plan_btn2 {
   color: var(--btn2-text-color);
   background-color: var(--btn2-bg-color);
@@ -188,67 +186,62 @@ body {
   background-color: var(--btn-focus-color);
 }
 
-
-#budgetPlan_title{
+#budgetPlan_title {
   text-align: center;
   width: 1000px;
-
 }
 
-#budgetPlan_overall{
+#budgetPlan_overall {
   height: 250px;
   width: 1000px;
   padding-top: 30px;
 }
 
-.budgetPlanText{
+.budgetPlanText {
   height: 50px;
   width: 160px;
   border-radius: 0.5em;
 }
 
-.budgetPlan_inputs{
+.budgetPlan_inputs {
   padding-bottom: 25px;
   font-size: 30px;
 }
 
-#budgetPlan_Col1{
+#budgetPlan_Col1 {
   float: left;
   text-align: right;
   padding-left: 140px;
 }
 
-#budgetPlan_Col2{
-  float:right;
+#budgetPlan_Col2 {
+  float: right;
   text-align: right;
   padding-right: 140px;
 }
 
-
-.budgetPlan_buttons{
+.budgetPlan_buttons {
   padding-top: 80px;
   text-align: center;
   width: 1000px;
 }
 
 ::placeholder {
-  text-align: center; 
+  text-align: center;
 }
 
-
-#budgetPlan_message{
+#budgetPlan_message {
   padding-top: 50px;
   text-align: center;
 }
 
-#dashboard_title{
+#dashboard_title {
   text-align: center;
   margin-bottom: 2em;
-
 }
 
 #dashboard_expenditures_title {
-  margin-top: 2em;  
+  margin-top: 2em;
 }
 
 .dashboard_container {
@@ -259,21 +252,66 @@ body {
 
 .dashboard_container .dashboard_cat_box {
   display: flex;
-}
-
-.dashboard_cat_box {
-  display: flex;
   align-items: center;
-  background-color: white;
   flex-direction: column;
   justify-content: space-between;
-  margin: .8rem;
-  padding: .75rem;
+  margin: 0.8rem;
+  padding: 0.75rem;
   width: 200px;
   height: 200px;
-  background-color: white;
+  background: radial-gradient(white 90%, grey 100%);
   border-radius: 10px;
-  border-color: black;
+  border-color: grey;
+  border-width: thick;
+  border-style: solid;
+}
+
+.dashboard_container .dashboard_healthy_cat_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.8rem;
+  padding: 0.75rem;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(white 90%, green 100%);
+  border-radius: 10px;
+  border-color: green;
+  border-width: thick;
+  border-style: solid;
+}
+
+.dashboard_container .dashboard_unhealthy_cat_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.8rem;
+  padding: 0.75rem;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(white 90%, red 100%);
+  border-radius: 10px;
+  border-color: red;
+  border-width: thick;
+  border-style: solid;
+}
+
+.dashboard_container .dashboard_danger_cat_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0.8rem;
+  padding: 0.75rem;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(white 90%, orange 100%);
+  border-radius: 10px;
+  border-color: orange;
+  border-width: thick;
+  border-style: solid;
 }
 
 .cat_title {
@@ -334,7 +372,6 @@ h4 {
   text-transform: uppercase;
 }
 
-
 /* GBH */
 /* Added the following CSS for striped table. */
 #transactions {
@@ -343,17 +380,18 @@ h4 {
   width: 100%;
 }
 
-#transactions td, #transactions th {
+#transactions td,
+#transactions th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-#transactions tr:nth-child(even){
+#transactions tr:nth-child(even) {
   background-color: #abacaa;
   color: black;
 }
 
-#transactions tr:nth-child(odd){
+#transactions tr:nth-child(odd) {
   background-color: #605f5e;
   color: black;
 }
@@ -369,19 +407,17 @@ h4 {
   color: white;
 }
 
-
-.budgetPlanName{
+.budgetPlanName {
   height: 50px;
   width: 550px;
   border-radius: 0.5em;
 }
 
-#budgetPlan_Name{
+#budgetPlan_Name {
   width: 1000px;
   font-size: 30px;
   text-align: center;
 }
-
 
 #connect_btn {
   color: var(--btn-text-color);
