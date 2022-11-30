@@ -49,7 +49,7 @@ function getCategoriesFromApi(event) {
   $.ajax(settings).done(function (response) {
     myPlotData = transform(response);
     buildChart(myPlotData);
-    buildLegend(myPlotData);
+    buildLegend(response);
   });
 
   event.preventDefault();
@@ -109,36 +109,36 @@ function buildChart(data) {
     .attr("stroke", "black")
     .style("stroke-width", "2px")
     .style("opacity", 0.7);
-
-  // WIP for legend
-  // var legendG = svg
-  //   .selectAll(".legend")
-  //   .data(pie(data_ready))
-  //   .enter()
-  //   .append("g")
-  //   .attr("transform", function (d, i) {
-  //     return "translate(" + (width - 110) + "," + (i * 15 + 20) + ")";
-  //   })
-  //   .attr("class", "legend");
-
-  // legendG
-  //   .append("rect")
-  //   .attr("width", 10)
-  //   .attr("height", 10)
-  //   .attr("fill", function (d, i) {
-  //     return color(i);
-  //   });
-
-  // legendG
-  //   .append("text")
-  //   .text(function (d) {
-  //     return d.value + "  " + d.data.emote;
-  //   })
-  //   .style("font-size", 12)
-  //   .attr("y", 10)
-  //   .attr("x", 11);
 }
 
-function buildLegend(data) {}
+function buildLegend(data) {
+  const legend = document.getElementById("myLegend");
+  if (data !== undefined) {
+    let table = document.getElementById("myLegendBody");
+    let total = 0;
+    table.innerHTML = "";
+
+    for (var i = 0; i < data.length; i++) {
+      console.log(data);
+
+      var row = `<tr>
+                        <td>${data[i].Category}</td>
+                        <td style="text-align:right;">${data[i].Amount}</td>
+                  </tr>`;
+      table.innerHTML += row;
+      total += data[i].Amount;
+    }
+
+    let footer = `<tfoot style="height:100px;">
+      <tr>
+        <td>Sum</td>
+        <td style="text-align:right;">${total.toFixed(2)}</td>
+      </tr>
+    </tfoot>`;
+
+    legend.innerHTML += footer;
+    legend.style.display = "inline-block";
+  }
+}
 
 chartform.addEventListener("submit", getCategoriesFromApi);

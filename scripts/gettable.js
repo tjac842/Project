@@ -58,7 +58,7 @@ function buildTable(data) {
 
   for (var i = 0; i < data.length; i++) {
     var row = `<tr>
-                      <td>${data[i].Date}</td>
+                      <td>${data[i].Date.split("T")[0]}</td>
                       <td>${data[i].Amount}</td>
                       <td>${data[i].Category}</td>
                       <td>${data[i].Description}</td>

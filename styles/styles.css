@@ -438,3 +438,18 @@ h4 {
 #connect_btn:focus {
   background-color: var(--btn-focus-color);
 }
+
+#myLegend {
+  display: none;
+}
+
+#myLegend th,
+td {
+  width: 180px;
+  overflow: hidden;
+}
+
+#myChart {
+  display: inline-block;
+  padding-left: 100px;
+}
