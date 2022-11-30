@@ -8,7 +8,7 @@
     <link href="styles/index.css" rel="stylesheet" />
     <title>nus money</title>
   </head>
-  <body class="container full-height-grow">
+  <body class="container full-height-grow" onload="checkLogin()">
     <header class="main-header">
       <a href="/" class="brand-logo">
         <img src="images/nus-money-logo.svg" />
@@ -16,8 +16,14 @@
       </a>
       <nav class="main-nav">
         <ul>
+          <li><a href="howitworks.html">How it works</a></li>
           <li><a href="feature.html">My Spending Pattern</a></li>
           <li><a href="dashboard.html">My Dashboard</a></li>
+          <li>
+            <a href="https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/logout"
+              >Logout</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -31,7 +37,11 @@
                 <label for="startdate">Start Date</label>
               </td>
               <td>
-                <input type="date" id="startdate" placeholder="Enter start date..." />
+                <input
+                  type="date"
+                  id="startdate"
+                  placeholder="Enter start date..."
+                />
               </td>
             </tr>
             <tr>
@@ -39,7 +49,11 @@
                 <label for="enddate">End Date</label>
               </td>
               <td>
-                <input type="date" id="enddate" placeholder="Enter end date..." />
+                <input
+                  type="date"
+                  id="enddate"
+                  placeholder="Enter end date..."
+                />
               </td>
             </tr>
             <tr>
@@ -47,7 +61,11 @@
                 <label for="category">Category</label>
               </td>
               <td>
-                <input type="text" id="category" placeholder="Enter category..." />
+                <input
+                  type="text"
+                  id="category"
+                  placeholder="Enter category..."
+                />
               </td>
             </tr>
             <tr>
@@ -55,7 +73,11 @@
                 <label for="description">Description</label>
               </td>
               <td>
-                <input type="text" id="description" placeholder="Enter description..." />
+                <input
+                  type="text"
+                  id="description"
+                  placeholder="Enter description..."
+                />
               </td>
             </tr>
             <tr>
@@ -68,7 +90,7 @@
         </div>
       </form>
 
-      <br>
+      <br />
       <table id="transactions">
         <tr class="bg-info">
           <th>Date</th>
@@ -82,9 +104,25 @@
       </table>
     </section>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
     <script src="/scripts/gettable.js"></script>
+    <script>
+      function checkLogin() {
+        fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/profile", {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+          mode: "cors",
+          credentials: "include",
+        })
+          .then((response) => {
+            if (response.status !== 200) {
+              location.assign("/");
+            }
+          })
+          .catch((error) => {
+            location.assign("/");
+          });
+      }
+    </script>
   </body>
 </html>

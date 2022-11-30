@@ -7,79 +7,138 @@
     <link href="styles/styles.css" rel="stylesheet" />
     <link href="styles/index.css" rel="stylesheet" />
     <title>nus money</title>
-
   </head>
 
-  <body class="container">
+  <body class="container" onload="checkLogin()">
     <header class="main-header">
-        <a href="/" class="brand-logo">
-          <img src="images/nus-money-logo.svg" />
-          <div class="brand-logo-name">nus money</div>
-        </a>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="feature.html">How it works</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-          </ul>
-        </nav>
-      </header>
+      <a href="/" class="brand-logo">
+        <img src="images/nus-money-logo.svg" />
+        <div class="brand-logo-name">nus money</div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="howitworks.html">How it works</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li>
+            <a href="https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/logout"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <div id = "budgetPlan_title">
-        <h1>Budget Plan</h1>
-      </div>
+    <div id="budgetPlan_title">
+      <h1>Budget Plan</h1>
+    </div>
 
-      <div id = "budgetPlan_Name">
-        <form>
-            <label for= "planName"> Plan Name: </label>
-            <input type = "text" id="planName" placeholder="Input an name for your plan" class="budgetPlanName" name = "plan_name"/>  <br>
-        </form>
-      </div>
+    <div id="budgetPlan_Name">
+      <form>
+        <label for="planName"> Plan Name: </label>
+        <input
+          type="text"
+          id="planName"
+          placeholder="Input an name for your plan"
+          class="budgetPlanName"
+          name="plan_name"
+        />
+        <br />
+      </form>
+    </div>
 
+    <div id="budgetPlan_overall">
+      <form id="plan_form">
+        <div id="budgetPlan_Col1">
+          <div class="budgetPlan_inputs">
+            <label for="foodLabel"> Food: </label>
+            <input
+              type="text"
+              id="foodLabel"
+              class="budgetPlanText"
+              placeholder="Input amount ($)"
+              name="food"
+            />
+            <br />
+          </div>
 
+          <div class="budgetPlan_inputs">
+            <label for="transportLabel"> Transport: </label>
+            <input
+              type="text"
+              id="transportLabel"
+              class="budgetPlanText"
+              placeholder="Input amount ($)"
+              name="transport"
+            />
+            <br />
+          </div>
 
-      <div id = "budgetPlan_overall">
-        <form id = "plan_form">
+          <div class="budgetPlan_inputs">
+            <label for="utilitiesLabel"> Utilities: </label>
+            <input
+              type="text"
+              id="utilitiesLabel"
+              class="budgetPlanText"
+              placeholder="Input amount ($)"
+              name="utilities"
+            />
+            <br />
+          </div>
+        </div>
 
-            <div id = "budgetPlan_Col1">
-                <div class = "budgetPlan_inputs">
-                    <label for= "foodLabel"> Food: </label>
-                    <input type = "text" id="foodLabel" class="budgetPlanText" placeholder="Input amount ($)" name = "food"/>  <br>
-                </div>
+        <div id="budgetPlan_Col2">
+          <div class="budgetPlan_inputs">
+            <label for="shoppingLabel"> Shopping: </label>
+            <input
+              type="text"
+              id="shoppingLabel"
+              class="budgetPlanText"
+              placeholder="Input amount ($)"
+              name="shopping"
+            />
+            <br />
+          </div>
 
-                <div class = "budgetPlan_inputs">
-                    <label for= "transportLabel"> Transport: </label>
-                    <input type = "text" id="transportLabel" class="budgetPlanText"  placeholder="Input amount ($)" name = "transport"> <br>
-                </div>
+          <div class="budgetPlan_inputs">
+            <label for="miscLabel"> Misc: </label>
+            <input
+              type="text"
+              id="miscLabel"
+              class="budgetPlanText"
+              placeholder="Input amount ($)"
+              name="misc"
+            />
+            <br />
+          </div>
+        </div>
+      </form>
+    </div>
 
+    <div class="budgetPlan_buttons">
+      <button id="plan_btn">Create Plan!</button>
+      <button id="plan_btn2" onclick="window.location.href='dashboard.html'">
+        Cancel
+      </button>
+    </div>
 
-                <div class = "budgetPlan_inputs">
-                    <label for= "utilitiesLabel"> Utilities: </label>
-                    <input type = "text" id="utilitiesLabel" class="budgetPlanText"  placeholder="Input amount ($)" name = "utilities"> <br>
-                </div>
-            </div>
-
-            <div id = "budgetPlan_Col2">
-                <div class = "budgetPlan_inputs">
-                    <label for= "shoppingLabel"> Shopping: </label>
-                    <input type = "text" id="shoppingLabel" class="budgetPlanText"  placeholder="Input amount ($)" name = "shopping"> <br>
-                </div>
-
-                <div class = "budgetPlan_inputs">
-                    <label for= "miscLabel"> Misc: </label>
-                    <input type = "text" id="miscLabel" class="budgetPlanText"  placeholder="Input amount ($)" name = "misc"> <br>
-                </div>
-            </div>
-        </form>
-      </div>
-
-      <div class="budgetPlan_buttons">
-        <button id="plan_btn">Create Plan!</button>
-        <button id="plan_btn2" onclick="window.location.href='dashboard.html'">Cancel</button>
-      </div>
-
-      <script src="scripts/plan.js"></script>
-
+    <script src="scripts/plan.js"></script>
   </body>
-
-
+  <script>
+    function checkLogin() {
+      fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/profile", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        mode: "cors",
+        credentials: "include",
+      })
+        .then((response) => {
+          if (response.status !== 200) {
+            location.assign("/");
+          }
+        })
+        .catch((error) => {
+          location.assign("/");
+        });
+    }
+  </script>
 </html>

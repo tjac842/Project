@@ -9,23 +9,43 @@
     <title>nus money</title>
   </head>
 
-  <body class="container">
+  <body class="container" onload="checkLogin()">
     <header class="main-header">
-        <a href="/" class="brand-logo">
-          <img src="images/nus-money-logo.svg" />
-          <div class="brand-logo-name">nus money</div>
-        </a>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="feature.html">How it works</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-          </ul>
-        </nav>
-      </header>
+      <a href="/" class="brand-logo">
+        <img src="images/nus-money-logo.svg" />
+        <div class="brand-logo-name">nus money</div>
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="howitworks.html">How it works</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li>
+            <a href="https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/logout"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-      <p id="budgetPlan_message">Budget plan has been created successfully!</p>
-
+    <p id="budgetPlan_message">Budget plan has been created successfully!</p>
   </body>
-
-
+  <script>
+    function checkLogin() {
+      fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/profile", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        mode: "cors",
+        credentials: "include",
+      })
+        .then((response) => {
+          if (response.status !== 200) {
+            location.assign("/");
+          }
+        })
+        .catch((error) => {
+          location.assign("/");
+        });
+    }
+  </script>
 </html>

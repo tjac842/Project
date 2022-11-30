@@ -16,8 +16,7 @@
       </a>
       <nav class="main-nav">
         <ul>
-          <li><a href="feature.html">My Spending Pattern</a></li>
-          <li><a href="transactions.html">My Transaction Details</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
         </ul>
       </nav>
     </header>
@@ -45,4 +44,22 @@
     <!-- Our Javascript code to create the pie chart -->
     <script src="/scripts/getchart.js"></script>
   </body>
+  <script>
+    function checkLogin() {
+      fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/profile", {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+        mode: "cors",
+        credentials: "include",
+      })
+        .then((response) => {
+          if (response.status !== 200) {
+            location.assign("/");
+          }
+        })
+        .catch((error) => {
+          location.assign("/");
+        });
+    }
+  </script>
 </html>
