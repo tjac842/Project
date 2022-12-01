@@ -25,7 +25,7 @@ fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/account/balance", {
 })
   .then((response) => {
     if (response.status === 200) {
-      return response.json();
+      window.location.reload();
     }
   })
   .then((data) => {
