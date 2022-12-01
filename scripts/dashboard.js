@@ -9,10 +9,7 @@ connect.addEventListener("click", async () => {
     headers: { "Content-Type": "application/json" },
     credentials: "include",
   })
-    .then((response) => response.json())
-    .then((data) => {
-      window.location.reload();
-    })
+    .then(() => window.location.reload(true))
     .catch((error) => console.log(error));
 });
 
