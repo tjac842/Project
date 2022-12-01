@@ -11,7 +11,7 @@ connect.addEventListener("click", async () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      return data || {};
+      window.location.reload();
     })
     .catch((error) => console.log(error));
 });
@@ -25,7 +25,7 @@ fetch("https://nus-course-backend-5i7iu7m5xa-uc.a.run.app/account/balance", {
 })
   .then((response) => {
     if (response.status === 200) {
-      window.location.reload();
+      return response.json();
     }
   })
   .then((data) => {
