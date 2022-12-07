@@ -12,3 +12,9 @@ Create a copy of the Repository on your machine and push the cloned one to a new
 
 
 ### 1.3 Double-check files in the directory
+Ensured that a local copy of the cloned project is in the relevant project folder. Pulled the latest changes from my GitHub Repository into VS Code, with the README.md file updated.
+
+## 2. GitHub Pages
+
+From the Settings Tab, located the Pages Tab. Made the site live after adjusting the following:
+[to add image]
