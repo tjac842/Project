@@ -1,6 +1,14 @@
-# nusmoneyFE_hweeping
-Show and Tell for nus money FE app to be deployed on netlify
-//GitHub Action : Netlify Deploy
-Using https://github.com/marketplace/actions/netlify-deploy
+# Show-and-Tell Project
 
-//Testing if a new commit will automatically trigger a new deployment of nusmoney app on Netlify.
+## Links
+* [Cloning one GitHub Repository to another](https://github.com/MrGeislinger/flatiron-school-data-science-curriculum-resources/tree/main/Git/Tools)
+
+## 1. Cloning NUSMoney Project to my own repository
+
+### 1.1 Create a local copy of the git_clone.sh file
+
+### 1.2 Copy the GitHub Repository
+Create a copy of the Repository on your machine and push the cloned one to a new Repository. Follow the prompts in the Terminal closely. 
+
+
+### 1.3 Double-check files in the directory
