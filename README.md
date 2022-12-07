@@ -17,4 +17,5 @@ Ensured that a local copy of the cloned project is in the relevant project folde
 ## 2. GitHub Pages
 
 From the Settings Tab, located the Pages Tab. Made the site live after adjusting the following:
-[to add image]
+
+<img width="1011" alt="github_page" src="https://user-images.githubusercontent.com/80460831/206234592-f1966cf0-3108-4bf6-bdad-0fdc3d103003.png">
