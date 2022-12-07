@@ -16,6 +16,8 @@ Ensured that a local copy of the cloned project is in the relevant project folde
 
 ## 2. GitHub Pages
 
-From the Settings Tab, located the Pages Tab. Made the site live after adjusting the following:
+From the Settings Tab, located the Pages Tab. Made the site live after changing the Branch to main and folder to root.
 
 <img width="1011" alt="github_page" src="https://user-images.githubusercontent.com/80460831/206234592-f1966cf0-3108-4bf6-bdad-0fdc3d103003.png">
+
+<img width="1031" alt="Screenshot 2022-12-08 at 12 45 49 AM" src="https://user-images.githubusercontent.com/80460831/206239383-a7dfd792-9b48-4aad-a750-bfa65f05ff03.png">
